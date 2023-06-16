@@ -6,7 +6,7 @@
   "scripts": {
     "test": "cypress run"
   },
-  "author": "",
+  "author": "Samuel Andrade <samuel.andradetp@outlook.com>",
   "license": "ISC",
   "devDependencies": {
     "@faker-js/faker": "^8.0.2",
