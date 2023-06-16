@@ -1,28 +1,30 @@
+import { faker } from '@faker-js/faker'
+
 describe('Signup', () => {
-    let newUser;
     const successMessage = 'Cadastro realizado com sucesso';
     const usedEmailMessage = 'Este email já está sendo usado';
     const requiredNameMessage = 'Nome é obrigatório';
     const requiredEmailMessage = 'Email é obrigatório';
     const requiredPasswordMessage = 'Password é obrigatório';
 
-    before(() => {
-        cy.createRandomUser().then((user) => {
-            newUser = user;
-        });
-    })
+    const user = {
+        nome: faker.person.firstName(),
+        email: faker.internet.email(),
+        password: faker.internet.password(),
+        administrador: `${faker.datatype.boolean()}`
+    }
 
     beforeEach(() => {
         cy.visit(`${Cypress.env('webBaseUrl')}/cadastrarusuarios`)
     })
 
     it('Signup done successfully', () => {
-        cy.fillAndSubmitForm(newUser);
+        cy.fillAndSubmitForm(user);
         cy.contains(successMessage);
     })
 
     it('Signup with already used email', () => {
-        cy.fillAndSubmitForm(newUser);
+        cy.fillAndSubmitForm(user);
         cy.contains(usedEmailMessage);
     })
 

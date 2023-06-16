@@ -14,7 +14,8 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './e2eSignupCommands'
+import './e2e/create-user-commands'
+import './api/user-commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

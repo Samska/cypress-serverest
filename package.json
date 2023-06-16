@@ -1,12 +1,12 @@
 {
-  "name": "cypress-study",
+  "name": "cypress-flow",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "cypress run"
   },
-  "author": "Samuel Andrade <samuel.andradetp@outlook.com>",
+  "author": "Samuel Andrade <samuel.andradetp@live.com>",
   "license": "ISC",
   "devDependencies": {
     "@faker-js/faker": "^8.0.2",
