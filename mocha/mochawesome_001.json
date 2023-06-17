@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-06-17T15:59:24.062Z",
+    "end": "2023-06-17T15:59:34.014Z",
+    "duration": 9952,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2d58b049-7397-4701-8a7b-b6459aa6f905",
+      "title": "",
+      "fullFile": "cypress/tests/e2e/create-user.cy.js",
+      "file": "cypress/tests/e2e/create-user.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6614f935-b9a9-4d73-992d-45e971173c9b",
+          "title": "Signup",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Signup done successfully",
+              "fullTitle": "Signup Signup done successfully",
+              "timedOut": null,
+              "duration": 2768,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fillAndSubmitForm(user);\ncy.contains(successMessage);",
+              "err": {},
+              "uuid": "20c678f5-6541-4040-bbb5-38ce99c3cd58",
+              "parentUUID": "6614f935-b9a9-4d73-992d-45e971173c9b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Signup with already used email",
+              "fullTitle": "Signup Signup with already used email",
+              "timedOut": null,
+              "duration": 1662,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fillAndSubmitForm(user);\ncy.contains(usedEmailMessage);",
+              "err": {},
+              "uuid": "e7d84217-3565-4a4a-8fb2-63753e0d8881",
+              "parentUUID": "6614f935-b9a9-4d73-992d-45e971173c9b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Signup with empty fields",
+              "fullTitle": "Signup Signup with empty fields",
+              "timedOut": null,
+              "duration": 598,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.btn.btn-primary').click();\ncy.contains(requiredNameMessage);\ncy.contains(requiredEmailMessage);\ncy.contains(requiredPasswordMessage);",
+              "err": {},
+              "uuid": "44a91b96-762b-4f4a-b226-364b90db87d8",
+              "parentUUID": "6614f935-b9a9-4d73-992d-45e971173c9b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "20c678f5-6541-4040-bbb5-38ce99c3cd58",
+            "e7d84217-3565-4a4a-8fb2-63753e0d8881",
+            "44a91b96-762b-4f4a-b226-364b90db87d8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5028,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
