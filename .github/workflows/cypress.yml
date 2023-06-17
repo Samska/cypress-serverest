@@ -22,3 +22,12 @@ jobs:
 
     - name: Run Cypress tests
       run: npm run test
+
+    - name: Generate test report
+      run: npm run after-test
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        personal_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./cypress/reports
