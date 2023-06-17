@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-        - cron: '0 0 * * 1/2'
+    - cron: "0 0 * * 1/2"
   workflow_dispatch: # Enable the run worklfow button on the Action
 
 jobs:
@@ -14,28 +14,50 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Run Cypress tests
-      run: npm run test
+      - name: Run Cypress tests
+        run: npm run test
 
-    - name: Generate test report
-      run: npm run after-test
+      - name: Generate test report
+        run: npm run after-test
 
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: Reports
-        path: ./cypress/reports
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: Reports
+          path: ./cypress/reports
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./cypress/reports
-        publish_branch: gh-pages
-        commit_message: Update the test report
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./cypress/reports
+          publish_branch: gh-pages
+          commit_message: Update the test report
+
+      - name: Send Slack Notification with Test Results
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
+        run: |
+          if [[ ${{ env.FAILED_TESTS }} -gt 0 ]]; then
+          color="#FF0000"
+          else
+          color="#00FF00"
+          fi
+
+          curl -X POST -H 'Content-type: application/json' --data '{
+          "channel": "'"${SLACK_CHANNEL}"'",
+          "attachments": [
+              {
+              "title": "Test Results",
+              "text": ":page_with_curl: *Total Requests:* ${{ env.TOTAL_REQUESTS }}\n:page_facing_up: *Total Tests:* ${{ env.TOTAL_TESTS }}\n:white_check_mark: *Passed Tests:* ${{ env.PASSED_TESTS }}\n:x: *Failed Tests:* ${{ env.FAILED_TESTS }}\n\n<https://${{ github.actor }}.github.io/cypress-serverest-demo/report.html|Latest test results>",
+              "color": "'"${color}"'"
+              }
+          ]
+          }' "${SLACK_WEBHOOK_URL}"
