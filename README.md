@@ -1,3 +1,4 @@
+[![Cypress Tests](https://github.com/Samska/cypress-serverest-demo/actions/workflows/cypress.yml/badge.svg)](https://github.com/Samska/cypress-serverest-demo/actions/workflows/cypress.yml)
 [![Badge ServeRest](https://img.shields.io/badge/API-ServeRest-green)](https://github.com/ServeRest/ServeRest/)
 
 # Cypress E2E and API tests in ServeRest application

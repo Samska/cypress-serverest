@@ -9,7 +9,8 @@ on:
   workflow_dispatch: # Enable the run worklfow button on the Action
 
 jobs:
-  build:
+  setup-and-run-tests:
+    name: Setup the environment and run the tests
     runs-on: ubuntu-latest
 
     steps:
