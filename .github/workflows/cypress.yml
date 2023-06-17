@@ -26,6 +26,12 @@ jobs:
     - name: Generate test report
       run: npm run after-test
 
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: Reports
+        path: ./cypress/reports
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
