@@ -37,7 +37,10 @@ This project has continuous integration with GitHub Actions. The configuration f
 ## Folder structure
 
 ```
-cypress-serverest-demo/                     
+cypress-serverest-demo/          
+ ├── .github/                               
+ │    ├── workflows/                        
+ │        ├── cypress.yml                           # Configuration for the tests on CI           
  ├── cypress/                                       # Cypress root folder                               
  │    ├── fixtures/                                 # Static data files used in tests
  │        ├── *.json                     
