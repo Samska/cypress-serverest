@@ -32,4 +32,4 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./cypress/reports
         publish_branch: gh-pages
-        commit_message: Update the test report
+        commit_message: Update the test report 
