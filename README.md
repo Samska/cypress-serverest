@@ -32,7 +32,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Continuous integration
 
-This project has continuous integration with GitHub Actions. The configuration file is located at the path `.github/workflows/cypress.yml`. Every time a push is made to the main branch, the pipeline is executed. With each execution, an artifact is generated with the test results and saved in that execution, as well as the results are published on the gh-pages and are available for consultation on this [page](https://samska.github.io/cypress-serverest-demo/report.html).
+This project has continuous integration with GitHub Actions and Cypress Cloud. The configuration file is located at the path `.github/workflows/cypress.yml`. Every time a push is made to the main branch, the pipeline is executed. With each execution, an artifact is generated with the test results and saved in that execution and also in Cypress Cloud, as well as the results are published on the gh-pages and are available for consultation on this [page](https://samska.github.io/cypress-serverest-demo/report.html).
 
 ## Folder structure
 
