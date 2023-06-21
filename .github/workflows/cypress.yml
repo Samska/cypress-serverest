@@ -20,7 +20,7 @@ jobs:
         run: npm install
 
       - name: Run Cypress tests
-        run: npm run test
+        run: npx cypress run --record --key ${{ secrets.CYPRESS_RECORD_KEY }}
 
       - name: Generate test report
         run: npm run after-test
