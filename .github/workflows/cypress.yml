@@ -4,8 +4,8 @@ name: Cypress Tests
     branches:
       - main
   schedule:
-    - cron: 0 0 * * 1/2
-  workflow_dispatch: null
+    - cron: '0 0 * * 1'
+  workflow_dispatch: #
 jobs:
   setup-and-run-tests:
     name: Setup the environment and run the tests
