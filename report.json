@@ -12,13 +12,13 @@
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2023-09-27T00:02:21.167Z",
-    "end": "2023-09-27T00:02:41.239Z",
-    "duration": 20072
+    "start": "2023-10-04T00:02:17.468Z",
+    "end": "2023-10-04T00:02:39.211Z",
+    "duration": 21743
   },
   "results": [
     {
-      "uuid": "3fa9a416-9b08-46de-89e9-3a81ddd035c8",
+      "uuid": "d28009f3-2319-4c2f-878d-1ee1ee4b65ed",
       "title": "",
       "fullFile": "cypress/tests/api/user.cy.js",
       "file": "cypress/tests/api/user.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "15c91cea-8181-4139-a9b7-55d344c7cff4",
+          "uuid": "1dd57d2f-6f27-4f34-acf6-8d9b813e39d9",
           "title": "Users endpoint",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Get all users",
               "fullTitle": "Users endpoint Get all users",
               "timedOut": null,
-              "duration": 242,
+              "duration": 347,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.getAllUsers().then(body => {\n  expect(body).to.have.property('quantidade');\n  expect(body).to.have.property('usuarios');\n});",
               "err": {},
-              "uuid": "55e7a3d7-140b-46af-a518-d279634ee4d4",
-              "parentUUID": "15c91cea-8181-4139-a9b7-55d344c7cff4",
+              "uuid": "8c4b5e06-b62a-4d72-b32a-c5f0215a9852",
+              "parentUUID": "1dd57d2f-6f27-4f34-acf6-8d9b813e39d9",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Create a user",
               "fullTitle": "Users endpoint Create a user",
               "timedOut": null,
-              "duration": 81,
+              "duration": 105,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.createUser(payload).then(response => {\n  expect(response.status).to.eq(201);\n  expect(response.body).to.have.property('message', 'Cadastro realizado com sucesso');\n  Cypress.env('userId', response.body._id);\n});",
               "err": {},
-              "uuid": "c01d9ec5-1fa3-4177-8c64-9f795bf760b0",
-              "parentUUID": "15c91cea-8181-4139-a9b7-55d344c7cff4",
+              "uuid": "4027e2a5-ed51-4955-9f39-f2ff8eefa122",
+              "parentUUID": "1dd57d2f-6f27-4f34-acf6-8d9b813e39d9",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Get user by ID",
               "fullTitle": "Users endpoint Get user by ID",
               "timedOut": null,
-              "duration": 90,
+              "duration": 98,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -83,8 +83,8 @@
               "context": null,
               "code": "cy.getUserById(Cypress.env('userId')).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body).to.have.property('nome');\n  expect(response.body).to.have.property('email');\n  expect(response.body).to.have.property('password');\n  expect(response.body).to.have.property('administrador');\n  expect(response.body).to.have.property('_id');\n});",
               "err": {},
-              "uuid": "eaf6dd55-7b6f-4a8f-9d27-fb60edbe9cc8",
-              "parentUUID": "15c91cea-8181-4139-a9b7-55d344c7cff4",
+              "uuid": "1fb3f09a-f68e-4723-b468-4e39d3ae4a61",
+              "parentUUID": "1dd57d2f-6f27-4f34-acf6-8d9b813e39d9",
               "isHook": false,
               "skipped": false
             },
@@ -92,7 +92,7 @@
               "title": "Update user by ID",
               "fullTitle": "Users endpoint Update user by ID",
               "timedOut": null,
-              "duration": 85,
+              "duration": 94,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -101,8 +101,8 @@
               "context": null,
               "code": "const updatedEmail = _faker.faker.internet.email();\nconst updatedPayload = _objectSpread(_objectSpread({}, payload), {}, {\n  email: updatedEmail\n});\ncy.updateUserById(Cypress.env('userId'), updatedPayload).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body).to.have.property('message', 'Registro alterado com sucesso');\n});",
               "err": {},
-              "uuid": "73ccadcb-5cd3-4f2b-abd1-3d5832237f57",
-              "parentUUID": "15c91cea-8181-4139-a9b7-55d344c7cff4",
+              "uuid": "d70223ec-af93-4972-bacc-6ec921338ef6",
+              "parentUUID": "1dd57d2f-6f27-4f34-acf6-8d9b813e39d9",
               "isHook": false,
               "skipped": false
             },
@@ -119,24 +119,24 @@
               "context": null,
               "code": "cy.deleteUserById(Cypress.env('userId')).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body).to.have.property('message', 'Registro excluído com sucesso');\n});",
               "err": {},
-              "uuid": "8c084e6f-de1a-4724-a36a-564fc666883e",
-              "parentUUID": "15c91cea-8181-4139-a9b7-55d344c7cff4",
+              "uuid": "ac8ce61d-810f-4ddc-9e5b-4db203ac5da5",
+              "parentUUID": "1dd57d2f-6f27-4f34-acf6-8d9b813e39d9",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "55e7a3d7-140b-46af-a518-d279634ee4d4",
-            "c01d9ec5-1fa3-4177-8c64-9f795bf760b0",
-            "eaf6dd55-7b6f-4a8f-9d27-fb60edbe9cc8",
-            "73ccadcb-5cd3-4f2b-abd1-3d5832237f57",
-            "8c084e6f-de1a-4724-a36a-564fc666883e"
+            "8c4b5e06-b62a-4d72-b32a-c5f0215a9852",
+            "4027e2a5-ed51-4955-9f39-f2ff8eefa122",
+            "1fb3f09a-f68e-4723-b468-4e39d3ae4a61",
+            "d70223ec-af93-4972-bacc-6ec921338ef6",
+            "ac8ce61d-810f-4ddc-9e5b-4db203ac5da5"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 601,
+          "duration": 747,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -152,7 +152,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "3bd6ae29-363f-4506-9041-f76814321f7a",
+      "uuid": "97875bd2-f42e-4d21-858b-fd4a4f97c7da",
       "title": "",
       "fullFile": "cypress/tests/e2e/create-user.cy.js",
       "file": "cypress/tests/e2e/create-user.cy.js",
@@ -161,7 +161,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "55e2aa39-5865-4388-a3fd-96e7a28cf921",
+          "uuid": "820970de-b1c6-499e-a685-927d05bab459",
           "title": "Signup",
           "fullFile": "",
           "file": "",
@@ -172,7 +172,7 @@
               "title": "Signup done successfully",
               "fullTitle": "Signup Signup done successfully",
               "timedOut": null,
-              "duration": 2817,
+              "duration": 3429,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -181,8 +181,8 @@
               "context": null,
               "code": "cy.fillAndSubmitForm(user);\ncy.contains(successMessage);",
               "err": {},
-              "uuid": "0264e9dc-4e2c-4cd1-b22a-037e79923b9e",
-              "parentUUID": "55e2aa39-5865-4388-a3fd-96e7a28cf921",
+              "uuid": "848ca66d-3480-47af-aab6-b3e9e4189ff2",
+              "parentUUID": "820970de-b1c6-499e-a685-927d05bab459",
               "isHook": false,
               "skipped": false
             },
@@ -190,7 +190,7 @@
               "title": "Signup with already used email",
               "fullTitle": "Signup Signup with already used email",
               "timedOut": null,
-              "duration": 1496,
+              "duration": 1765,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -199,8 +199,8 @@
               "context": null,
               "code": "cy.fillAndSubmitForm(user);\ncy.contains(usedEmailMessage);",
               "err": {},
-              "uuid": "48e2c6c5-ceb7-430e-a559-03eca8e07916",
-              "parentUUID": "55e2aa39-5865-4388-a3fd-96e7a28cf921",
+              "uuid": "e02c2ca1-d22c-4abb-bdc9-13d2f1250dd5",
+              "parentUUID": "820970de-b1c6-499e-a685-927d05bab459",
               "isHook": false,
               "skipped": false
             },
@@ -208,7 +208,7 @@
               "title": "Signup with empty fields",
               "fullTitle": "Signup Signup with empty fields",
               "timedOut": null,
-              "duration": 527,
+              "duration": 657,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -217,22 +217,22 @@
               "context": null,
               "code": "cy.get('.btn.btn-primary').click();\ncy.contains(requiredNameMessage);\ncy.contains(requiredEmailMessage);\ncy.contains(requiredPasswordMessage);",
               "err": {},
-              "uuid": "033895e4-9f24-4e49-8e37-e28eb317bf4e",
-              "parentUUID": "55e2aa39-5865-4388-a3fd-96e7a28cf921",
+              "uuid": "9b036806-8700-40e3-a96d-835c9b733a93",
+              "parentUUID": "820970de-b1c6-499e-a685-927d05bab459",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "0264e9dc-4e2c-4cd1-b22a-037e79923b9e",
-            "48e2c6c5-ceb7-430e-a559-03eca8e07916",
-            "033895e4-9f24-4e49-8e37-e28eb317bf4e"
+            "848ca66d-3480-47af-aab6-b3e9e4189ff2",
+            "e02c2ca1-d22c-4abb-bdc9-13d2f1250dd5",
+            "9b036806-8700-40e3-a96d-835c9b733a93"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4840,
+          "duration": 5851,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
