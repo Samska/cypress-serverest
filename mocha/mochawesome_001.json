@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2024-01-31T00:02:31.108Z",
-    "end": "2024-01-31T00:02:38.847Z",
-    "duration": 7739,
+    "start": "2024-02-07T00:02:26.160Z",
+    "end": "2024-02-07T00:02:33.991Z",
+    "duration": 7831,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "4bfcca01-2a57-418e-a175-2039e0199c71",
+      "uuid": "db29f0c5-83d5-48cb-91cd-c26ec85b1e8d",
       "title": "",
       "fullFile": "cypress/tests/e2e/create-user.cy.js",
       "file": "cypress/tests/e2e/create-user.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c767dcda-5de2-4cd0-b106-1b7a6af5384e",
+          "uuid": "2deb2139-7390-47cb-ab09-de09b149aafc",
           "title": "Signup",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Signup done successfully",
               "fullTitle": "Signup Signup done successfully",
               "timedOut": null,
-              "duration": 2418,
+              "duration": 2374,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.fillAndSubmitForm(user);\ncy.contains(successMessage);",
               "err": {},
-              "uuid": "414c0b06-bf05-4ba3-b3cf-7f0f46472dc0",
-              "parentUUID": "c767dcda-5de2-4cd0-b106-1b7a6af5384e",
+              "uuid": "921ab43b-f7cf-4784-9214-2241a93a762d",
+              "parentUUID": "2deb2139-7390-47cb-ab09-de09b149aafc",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Signup with already used email",
               "fullTitle": "Signup Signup with already used email",
               "timedOut": null,
-              "duration": 1268,
+              "duration": 1406,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.fillAndSubmitForm(user);\ncy.contains(usedEmailMessage);",
               "err": {},
-              "uuid": "11324201-41bb-42e2-aae6-a45578c3b63e",
-              "parentUUID": "c767dcda-5de2-4cd0-b106-1b7a6af5384e",
+              "uuid": "6a44ba2d-b006-4414-b1e2-7d7209dadca9",
+              "parentUUID": "2deb2139-7390-47cb-ab09-de09b149aafc",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Signup with empty fields",
               "fullTitle": "Signup Signup with empty fields",
               "timedOut": null,
-              "duration": 317,
+              "duration": 367,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "cy.get('.btn.btn-primary').click();\ncy.contains(requiredNameMessage);\ncy.contains(requiredEmailMessage);\ncy.contains(requiredPasswordMessage);",
               "err": {},
-              "uuid": "df583c98-cade-4fa4-b38c-e75c0df4ae0c",
-              "parentUUID": "c767dcda-5de2-4cd0-b106-1b7a6af5384e",
+              "uuid": "3eee077b-1dd5-4ab7-9b8e-032dad5e024c",
+              "parentUUID": "2deb2139-7390-47cb-ab09-de09b149aafc",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "414c0b06-bf05-4ba3-b3cf-7f0f46472dc0",
-            "11324201-41bb-42e2-aae6-a45578c3b63e",
-            "df583c98-cade-4fa4-b38c-e75c0df4ae0c"
+            "921ab43b-f7cf-4784-9214-2241a93a762d",
+            "6a44ba2d-b006-4414-b1e2-7d7209dadca9",
+            "3eee077b-1dd5-4ab7-9b8e-032dad5e024c"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4003,
+          "duration": 4147,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
