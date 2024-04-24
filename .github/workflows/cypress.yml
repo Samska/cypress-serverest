@@ -3,8 +3,6 @@ name: Cypress Tests
   push:
     branches:
       - main
-  schedule:
-    - cron: '0 0 * * 3'
   workflow_dispatch: #
 jobs:
   setup-and-run-tests:
