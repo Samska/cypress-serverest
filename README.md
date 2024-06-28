@@ -1,4 +1,4 @@
-[![Cypress Tests](https://github.com/Samska/cypress-serverest-demo/actions/workflows/cypress.yml/badge.svg)](https://github.com/Samska/cypress-serverest-demo/actions/workflows/cypress.yml)
+[![Cypress Tests](https://github.com/Samska/cypress-serverest/actions/workflows/cypress.yml/badge.svg)](https://github.com/Samska/cypress-serverest/actions/workflows/cypress.yml)
 [![Badge ServeRest](https://img.shields.io/badge/API-ServeRest-green)](https://github.com/ServeRest/ServeRest/)
 
 # Cypress E2E and API tests in ServeRest application
@@ -32,7 +32,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Continuous integration
 
-This project has continuous integration with GitHub Actions. The configuration file is located at the path `.github/workflows/cypress.yml`. Every time a push is made to the main branch, the pipeline is executed. With each execution, an artifact is generated with the test results and saved in that execution, as well as the results are published on the gh-pages and are available for consultation on this [page](https://samska.github.io/cypress-serverest-demo/report.html).
+This project has continuous integration with GitHub Actions. The configuration file is located at the path `.github/workflows/cypress.yml`. Every time a push is made to the main branch, the pipeline is executed. With each execution, an artifact is generated with the test results and saved in that execution, as well as the results are published on the gh-pages and are available for consultation on this [page](https://samska.github.io/cypress-serverest/report.html).
 
 ## Folder structure
 
