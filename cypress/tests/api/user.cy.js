@@ -28,10 +28,10 @@ describe('Users endpoint', () => {
     it('Get user by ID', () => {
         cy.getUserById(Cypress.env('userId')).then((response) => {
             expect(response.status).to.eq(200);
-            expect(response.body).to.have.property('nome');
-            expect(response.body).to.have.property('email');
-            expect(response.body).to.have.property('password');
-            expect(response.body).to.have.property('administrador');
+            expect(response.body).to.have.property('nome', payload.nome);
+            expect(response.body).to.have.property('email', payload.email);
+            expect(response.body).to.have.property('password', payload.password);
+            expect(response.body).to.have.property('administrador', payload.administrador);
             expect(response.body).to.have.property('_id');
         });
     });
