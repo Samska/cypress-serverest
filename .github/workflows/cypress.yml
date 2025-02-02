@@ -33,7 +33,7 @@ jobs:
             echo "PASSED_TESTS=$passedTests" >> $GITHUB_ENV
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Reports
           path: ./cypress/reports
